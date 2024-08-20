@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block head %}
+    <link rel="stylesheet" href="style.css" />
+    <title>{% block title %}{% endblock %} - My Webpage</title>
+    {% endblock %}
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/task">Task</a></li>
+          <li><a href="/create_task">Create Task</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+      {% block footer %} &copy; 2024 Django - Project, Inc. Todas las marcas
+      comerciales a las que se hace referencia son propiedad de sus respectivos
+      dueños. {% endblock %}
+    </div>
+  </body>
+</html>

@@ -1,11 +1,4 @@
-<header>
-  <nav>
-    <p><a href="/">Home</a></p>
-    <p><a href="/about">About</a></p>
-    <p><a href="/projects">Projects</a></p>
-    <p><a href="/task">Task</a></p>
-  </nav>
-</header>
+{% extends 'layouts/base.html' %} {% block content %}
 
 <h1>Task</h1>
 
@@ -19,4 +12,4 @@
   <button>Delete</button>
   <button>✓ Done</button>
 </div>
-{% endfor %}
+{% endfor %} {% endblock %}
