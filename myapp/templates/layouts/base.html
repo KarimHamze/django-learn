@@ -14,7 +14,7 @@
         <ul>
           <li class="active"><a href="{% url 'index' %}">Home</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'projects' %}">Projects</a></li>
+          <li><a href="{% url 'project' %}">Projects</a></li>
           <li><a href="{% url 'task' %}">Task</a></li>
           <li><a href="{% url 'create_task' %}">Create Task</a></li>
           <li><a href="{% url 'create_projects' %}">Create Projects</a></li>
@@ -26,23 +26,34 @@
     <footer>
       {% block footer %} &copy; 2024 Django - Project, Inc. Todas las marcas
       comerciales a las que se hace referencia son propiedad de sus respectivos
-      dueños. {% endblock %}
+      dueños.{% endblock %}
+      <hr />
       <ul>
-        <ol>
-          <img src="{% static 'img/whatsapp.png' %}" alt="" />
-        </ol>
-        <ol>
-          <img src="{% static 'img/instagram.png' %}" alt="" />
-        </ol>
-        <ol>
-          <img src="{% static 'img/fb.png' %}" alt="" />
-        </ol>
-        <ol>
-          <img src="{% static 'img/github.png' %}" alt="" />
-        </ol>
-        <ol>
-          <img src="{% static 'img/linkedin.png' %}" alt="" />
-        </ol>
+        <li>
+          <a href="">
+            <img src="{% static 'img/whatsapp.png' %}" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/karimhamze/">
+            <img src="{% static 'img/instagram.png' %}" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/karim.hamze.585/">
+            <img src="{% static 'img/fb.png' %}" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/KarimHamze">
+            <img src="{% static 'img/github.png' %}" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/karim-hamze-44a764263/">
+            <img src="{% static 'img/linkedin.png' %}" alt="" />
+          </a>
+        </li>
       </ul>
     </footer>
   </body>

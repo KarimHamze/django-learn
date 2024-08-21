@@ -6,10 +6,14 @@
 
 <div>
   {# note: estas son tareas #}
-  <h2>{% if task.done == False %}⏱️{% else %}✅{% endif %} {{task.title}}</h2>
+  <h2>
+    {% if task.done == False %}⏱️ In progress |{% else %}✅ Done |{% endif %}
+    {{task.title}}
+  </h2>
   <p>{{task.description}}</p>
   <p>Project: {{task.project}}</p>
-  <button>Delete</button>
   <button>✓ Done</button>
+  <button>Delete</button>
+  <hr />
 </div>
 {% endfor %} {% endblock %}

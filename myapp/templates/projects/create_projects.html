@@ -1,9 +1,11 @@
-{% extends 'layouts/base.html' %} {% block content %}
+{% extends 'layouts/base.html' %} {% load static %} {% block content %}
 
-<h1>Crearte Project</h1>
+<h1 class="titulo">Crearte Project</h1>
 
-<form method="POST">
-  {% csrf_token %} {{form}}
-  <button>save</button>
-</form>
+<div class="create_projects">
+  <form method="POST">
+    {% csrf_token %} {{form}}
+    <button>save</button>
+  </form>
+</div>
 {% endblock %}
