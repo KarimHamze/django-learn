@@ -27,19 +27,6 @@ def projects(request):
         'projects': projects
     })
 
-def create_projects(request):
-   if request.method == 'GET':
-       return render(request, 'projects/create_projects.html', {
-           'form': CreateNewProject()
-       })
-   else:
-       project = Project.objects.create(name=request.POST['name'])
-       print(project)
-       return render(request, 'projects/create_projects.html', {
-           'form': CreateNewProject()
-       })
-
-
 def task(request): #, title):
     #task = Task.objects.get(title=title)
     tasks = Task.objects.all()
@@ -55,4 +42,13 @@ def create_task(request):
     })
     else:
         Task.objects.create(title=request.POST['title'], description=request.POST['description'], project_id=2)
-        return redirect('/task/')
+        return redirect('task')
+
+def create_projects(request):
+   if request.method == 'GET':
+       return render(request, 'projects/create_projects.html', {
+           'form': CreateNewProject()
+       })
+   else:
+       Project.objects.create(name=request.POST['name'])
+       return redirect('projects')
