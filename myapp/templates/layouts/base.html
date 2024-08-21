@@ -22,10 +22,28 @@
       </nav>
     </header>
     <div id="content">{% block content %}{% endblock %}</div>
+
     <footer>
       {% block footer %} &copy; 2024 Django - Project, Inc. Todas las marcas
       comerciales a las que se hace referencia son propiedad de sus respectivos
       dueños. {% endblock %}
+      <ul>
+        <ol>
+          <img src="{% static 'img/whatsapp.png' %}" alt="" />
+        </ol>
+        <ol>
+          <img src="{% static 'img/instagram.png' %}" alt="" />
+        </ol>
+        <ol>
+          <img src="{% static 'img/fb.png' %}" alt="" />
+        </ol>
+        <ol>
+          <img src="{% static 'img/github.png' %}" alt="" />
+        </ol>
+        <ol>
+          <img src="{% static 'img/linkedin.png' %}" alt="" />
+        </ol>
+      </ul>
     </footer>
   </body>
 </html>
