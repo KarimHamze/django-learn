@@ -1,8 +1,10 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     {% block head %}
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{% static '/css/style.css' %}" />
     <title>{% block title %}{% endblock %} - My Webpage</title>
     {% endblock %}
   </head>
@@ -10,7 +12,7 @@
     <header>
       <nav>
         <ul>
-          <li><a href="{% url 'index' %}">Home</a></li>
+          <li class="active"><a href="{% url 'index' %}">Home</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="{% url 'projects' %}">Projects</a></li>
           <li><a href="{% url 'task' %}">Task</a></li>
@@ -20,10 +22,10 @@
       </nav>
     </header>
     <div id="content">{% block content %}{% endblock %}</div>
-    <div id="footer">
+    <footer>
       {% block footer %} &copy; 2024 Django - Project, Inc. Todas las marcas
       comerciales a las que se hace referencia son propiedad de sus respectivos
       dueños. {% endblock %}
-    </div>
+    </footer>
   </body>
 </html>

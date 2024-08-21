@@ -6,7 +6,7 @@ from .forms import CreateNewTask, CreateNewProject
 # Create your views here.
 
 def index(request):
-    title = 'Django Course!!'
+    title = 'Django training'
     return render(request, 'index.html', {
         'title': title
     })

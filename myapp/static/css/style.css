@@ -1,0 +1,44 @@
+body {
+  background-color: #202020;
+  color: whitesmoke;
+}
+h1 {
+  text-align: center;
+  font-size: 4em;
+}
+p {
+  font-size: 1.4em;
+}
+/* ----------NAVBAR---------- */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  font-size: 1.5em;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover:not(.active) {
+  background-color: #111;
+}
+.active {
+  background-color: #04aa6d;
+}
+/* ---------- ##### ---------- */
+
+/* ----------FOOTER---------- */
+footer {
+  background-color: #333;
+  font-size: 1.5em;
+}
+/* ---------- ##### ---------- */
